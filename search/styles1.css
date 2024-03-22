@@ -1,0 +1,117 @@
+.bar{
+	background: rgb(243, 237, 237);
+	height: 60px;
+}
+
+.line{
+    border-bottom-style: solid;
+    border-bottom-color: rgb(243, 237, 237);;
+    height: 75px;
+}
+
+.top{
+    font-size: 20px;
+    color: rgb(230, 9, 9);;
+    margin-left: 40px;
+    margin-top: 10px;
+}
+
+.logo{
+    margin-left: 15px;
+    margin-top: 10px;
+}
+
+#signup{
+    float: right;
+    margin-right: 15px;
+    margin-top: 14px;
+    font-size: 13px;
+}
+
+.grid{
+    float: right;
+    margin-right: 13px;
+    margin-top: 19px;
+    margin-left: 7px;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  input[type=text], select, textarea {
+    width: 500px; 
+    height: 25px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+    font-size: 13px;
+  }
+  
+  label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+  }
+  
+  button[type=submit] {
+    float: right;
+  }
+  
+  
+  
+  .container {
+    margin-left: 45px;
+    margin-top: 25px;
+  }
+  
+  .col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+  }
+
+  .col-25-1 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+    font-size: 11px;
+    color: gray;
+  }
+
+  .col-25-2 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+    font-size: 13px;
+  }
+
+  .col-25-3 {
+    float: left;
+    width: 25%;
+    margin-top: 8px;
+    font-size: 13px;
+    color: gray;
+    font-weight: bold;
+  }
+  
+  .col-50 {
+    float: left;
+    width: 50%;
+    margin-top: 6px;
+  }
+  
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+ @media screen and (max-width: 600px) {
+    .col-25, .col-25-1, .col-25-2, .col-25-3, .col-50, input[type=submit] {
+      width: 100%;
+      margin-top: 0;
+    }}

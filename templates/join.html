@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Join
+{% endblock %}
+
+{% block main %}
+    <form action="/join" method="post">
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="participant" placeholder="Number of participants" type="number">
+        </div>
+        <div>
+        <select name="category">
+            <option>Basketball</option>
+            <option>Badminton</option>
+            <option>Tennis</option>
+            <option>Volleyball</option>
+        </select>
+        </div>
+        <button class="btn btn-primary" type="submit">Submit</button>
+    </form>
+{% endblock %}

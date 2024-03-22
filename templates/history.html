@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+    <table class="table table-dark">
+        <thead>
+            <tr>
+                <th>Court</th>
+                <th>Date</th>
+                <th>From</th>
+                <th>To</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in history %}
+                <tr>
+                    <td>{{ row.category }}</td>
+                    <td>{{ row.booking_date }}</td>
+                    <td>{{ row.begin }}</td>
+                    <td>{{ row.end }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <div>
+        <a href="/unbook" class="btn btn-primary">Cancel a booking?</a>
+    </div>
+{% endblock %}

@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Cancel a booking
+{% endblock %}
+
+{% block main %}
+    <form action="/unbook" method="post">
+        <div>
+        <select name="category">
+            <option>Basketball</option>
+            <option>Badminton</option>
+            <option>Tennis</option>
+            <option>Volleyball</option>
+        </select>
+        </div>
+        <div class="form-group">
+            <input type="date" placeholder="Date" name="date">
+        </div>
+        <div>
+            <select name="begin">
+            <option>09:00</option>
+            <option>10:00</option>
+            <option>11:00</option>
+            <option>12:00</option>
+            <option>13:00</option>
+            <option>14:00</option>
+            <option>15:00</option>
+            <option>16:00</option>
+            <option>17:00</option>
+            <option>18:00</option>
+            <option>19:00</option>
+            <option>20:00</option>
+            <option>21:00</option>
+            </select>
+        </div>
+        <div>
+        <select name="end">
+            <option>10:00</option>
+            <option>11:00</option>
+            <option>12:00</option>
+            <option>13:00</option>
+            <option>14:00</option>
+            <option>15:00</option>
+            <option>16:00</option>
+            <option>17:00</option>
+            <option>18:00</option>
+            <option>19:00</option>
+            <option>20:00</option>
+            <option>21:00</option>
+            <option>22:00</option>
+        </select>
+        </div>
+        <div>
+            <button class="btn btn-primary" type="submit">Cancel booking</button>
+        </div>
+    </form>
+{% endblock %}

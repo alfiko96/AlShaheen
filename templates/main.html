@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Main
+{% endblock %}
+
+{% block main %}
+        <div class="jumbotron">
+           <h1 class="display-4">Welcome</h1>
+           <p class="lead">This is ASRC's Offical website where we post upcoming events or tournaments that members can look forward to.</p>
+           {% if not session.user_id %}
+              <hr class="my-4">
+              <p>Sign up to particate.</p>
+              <p class="lead">
+              <a class="btn btn-primary btn-lg" href="/register" role="button">Sign up</a>
+              </p>
+           {% endif %}
+        </div>
+       <div class="row">
+  <div class="col-sm-6">
+    <div class="card text-white bg-success mb-3">
+      <div class="card-body">
+        <h5 class="card-title">Tournaments</h5>
+        <p class="card-text">Do you want to show who's the best?</p>
+        {% if not session.user_id %}
+        <a href="/login" class="btn btn-primary">Click here</a>
+        {% else %}
+        <a href="/tournament" class="btn btn-primary">Click here</a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card text-white bg-danger mb-3">
+      <div class="card-body">
+        <h5 class="card-title">Bookings</h5>
+        <p class="card-text">Avoid getting in line and book a court at your convenience.</p>
+        {% if not session.user_id %}
+        <a href="/login" class="btn btn-primary">Click here</a>
+        {% else %}
+        <a href="/book" class="btn btn-primary">Click here</a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

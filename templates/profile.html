@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Profile
+{% endblock %}
+
+{% block main %}
+    <table class="table table-dark">
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>E-mail</th>
+            </tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td>{{ fname }}</td>
+                    <td>{{ lname }}</td>
+                    <td>{{ email }}</td>
+                </tr>
+        </tbody>
+    </table>
+    <a class="btn btn-primary btn-lg" href="/update" role="button">Update Profile</a>
+{% endblock %}

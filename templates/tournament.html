@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Tournament
+{% endblock %}
+
+{% block main %}
+    <table class="table table-dark">
+        <thead>
+            <tr>
+                <th>Tournament</th>
+                <th>Category</th>
+                <th>Number of participants</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for act in acts %}
+                <tr>
+                    <td>{{ act.tournamentname }}</td>
+                    <td>{{ act.category }}</td>
+                    <td>{{ act.participants }}</td>
+                    <td>{{ act.date }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a class="btn btn-primary btn-lg" href="/join" role="button">Join</a>
+    <a class="btn btn-primary btn-lg" href="/unjoin" role="button">Unjoin</a>
+{% endblock %}
